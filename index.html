@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Kesehatan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <h1 class="title">Water Intake Calculator</h1>
+    <form id="calculator-form">
+      <div class="form-group">
+        <label for="umur">Umur</label>
+        <input type="number" id="umur" name="umur" required>
+        <span>tahun</span>
+      </div>
+
+      <div class="form-group">
+        <label>Jenis Kelamin</label>
+        <div class="radio-group">
+          <label><input type="radio" name="jenis_kelamin" value="laki-laki" required> Laki-laki</label>
+          <label><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tinggi">Tinggi Badan</label>
+        <input type="number" id="tinggi" name="tinggi" required>
+        <span>cm</span>
+      </div>
+
+      <div class="form-group">
+        <label for="berat">Berat Badan</label>
+        <input type="number" id="berat" name="berat" required>
+        <span>kg</span>
+      </div>
+
+      <div class="form-group">
+        <label for="tingkat-aktivitas">Tingkat Aktivitas</label>
+        <select id="tingkat-aktivitas" name="tingkat-aktivitas" required>
+          <option value="0.2">Ringan (olahraga 1-3 kali seminggu)</option>
+          <option value="0.4">Sedang (olahraga 3-5 kali seminggu)</option>
+          <option value="0.6">Berat (olahraga 6-7 kali seminggu)</option>
+        </select>
+      </div>
+
+      <button type="button" id="hitung-button">Hitung</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById("hitung-button").addEventListener("click", function () {
+      const umur = parseInt(document.getElementById("umur").value);
+      const berat = parseFloat(document.getElementById("berat").value);
+      const jenisKelamin = document.querySelector('input[name="jenis_kelamin"]:checked')?.value;
+      const aktivitas = parseFloat(document.getElementById("tingkat-aktivitas").value);
+
+      if (isNaN(umur) || isNaN(berat) || !jenisKelamin) {
+        alert("Harap isi semua data dengan benar.");
+        return;
+      }
+
+      let waterIntake = berat * 30;
+      waterIntake += waterIntake * aktivitas;
+
+      if (umur > 50) {
+        waterIntake *= 0.85;
+      }
+
+      if (jenisKelamin === "perempuan") {
+        waterIntake *= 0.90;
+      }
+
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = `<h2>Hasil</h2><p>Kebutuhan air harian Anda adalah <strong>${waterIntake.toFixed(2)} ml</strong>.</p>`;
+    });
+  </script>
+</body>
+</html>
