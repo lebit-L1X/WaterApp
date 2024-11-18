@@ -1,14 +1,14 @@
 {
-  "short_name": "WaterApp",
-  "name": "Water Application",
+  "short_name": "Health Project",
+  "name": "Health Project",
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/lebit-L1X/WaterApp/main/favicon-32x32.png",
+      "src": "https://raw.githubusercontent.com/lebit-L1X/WaterApp/main/logo.jpg",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://raw.githubusercontent.com/lebit-L1X/WaterApp/main/favicon-32x32.png",
+      "src": "https://raw.githubusercontent.com/lebit-L1X/WaterApp/main/logo.jpg",
       "sizes": "512x512",
       "type": "image/png"
     }
