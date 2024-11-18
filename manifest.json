@@ -5,12 +5,12 @@
     {
       "src": "https://raw.githubusercontent.com/lebit-L1X/WaterApp/main/logo.jpg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpg"
     },
     {
       "src": "https://raw.githubusercontent.com/lebit-L1X/WaterApp/main/logo.jpg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpg"
     }
   ],
   "theme_color": "#ffffff",
