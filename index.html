@@ -1,83 +1,114 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kalkulator Kesehatan</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="calculator-container">
-    <h1 class="title">Water Intake Calculator</h1>
-    <form id="calculator-form">
-      <div class="form-group">
-        <label for="umur">Umur</label>
-        <input type="number" id="umur" name="umur" required>
-        <span>tahun</span>
-      </div>
-
-      <div class="form-group">
-        <label>Jenis Kelamin</label>
-        <div class="radio-group">
-          <label><input type="radio" name="jenis_kelamin" value="laki-laki" required> Laki-laki</label>
-          <label><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</label>
+  <div class="content-container">
+    <div class="calculator-container">
+      <h1 class="title">Water Intake Calculator</h1>
+      <form id="calculator-form">
+        <div class="form-group">
+          <label for="umur">Umur</label>
+          <input type="number" id="umur" name="umur" required />
+          <span>tahun</span>
         </div>
-      </div>
+        <div class="form-group">
+          <label>Jenis Kelamin</label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="jenis_kelamin" value="laki-laki" required />
+              Laki-laki
+            </label>
+            <label>
+              <input type="radio" name="jenis_kelamin" value="perempuan" />
+              Perempuan
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="tinggi">Tinggi Badan</label>
+          <input type="number" id="tinggi" name="tinggi" required />
+          <span>cm</span>
+        </div>
+        <div class="form-group">
+          <label for="berat">Berat Badan</label>
+          <input type="number" id="berat" name="berat" required />
+          <span>kg</span>
+        </div>
+        <div class="form-group">
+          <label for="tingkat-aktivitas">Tingkat Aktivitas</label>
+          <select id="tingkat-aktivitas" name="tingkat-aktivitas" required>
+            <option value="0">Tidak Berolah Raga</option>
+            <option value="0.1">Ringan (olahraga 1-3 kali seminggu)</option>
+            <option value="0.2">Sedang (olahraga 3-5 kali seminggu)</option>
+            <option value="0.3">Berat (olahraga 6-7 kali seminggu)</option>
+          </select>
+        </div>
+        <button type="button" id="hitung-button">Hitung</button>
+      </form>
+      <div id="result"></div>
+    </div>
+    <section class="info-section">
+      <p>
+        Tubuh kita secara konstan kehilangan air sebagai bagian dari proses
+        metabolisme. Air dikeluarkan dari tubuh dalam bentuk urin, sebagai hasil
+        dari proses pencernaan, sebagai bagian dari pernapasan, serta melalui
+        keringat dan keluaran lain yang tidak disadari. Oleh karena itu, kita
+        perlu sering mengisi kembali cairan dalam sistem kita agar dapat
+        berfungsi secara optimal.
+      </p>
+      <p>
+        Tubuh manusia selalu berusaha untuk mempertahankan homeostasis dan
+        karena keringat sangat bervariasi tergantung pada aktivitas fisik dan
+        seberapa panas lingkungan, hal ini dapat mengakibatkan kebutuhan air
+        minum yang berbeda secara dramatis. Tinggal di iklim yang terlalu panas
+        atau terlalu dingin, atau sedang hamil juga merupakan faktor penting.
+      </p>
+      <p>
+        Salah satu alasan menggunakan kalkulator hidrasi adalah untuk menjaga
+        kesehatan, tetapi penelitian ilmiah juga menghubungkan asupan air yang
+        cukup dengan manfaat untuk pengobatan kondisi kesehatan serta
+        peningkatan kondisi mental. Air terdiri dari 75% berat badan (pada bayi)
+        dan 55% (pada lansia) dan sangat penting untuk homeostasis sel dan
+        kehidupan sehingga tidak heran air sangat penting bagi kesehatan
+        seseorang. Hebatnya, sebuah penelitian dengan jumlah sampel yang besar
+        baru-baru ini menemukan bahwa pada populasi yang hidup bebas dari
+        Jerman, Spanyol, dan Yunani, hanya sekitar 60% partisipan yang
+        terhidrasi dengan baik, sementara sekitar 20% mengalami hiperhidrasi dan
+        20% mengalami dehidrasi secara rata-rata dalam jangka waktu tujuh hari.
+      </p>
+      <h2>Manfaat terhidrasi cukup:</h2>
+      <p>
+        1. <strong>Kesehatan Ginjal:</strong> Ginjal berfungsi lebih efisien dengan adanya pasokan air yang melimpah. Jika ginjal menghemat air, hal ini akan menghasilkan urin yang lebih pekat yang akan menghabiskan lebih banyak energi dan lebih banyak menguras jaringan. Hal ini terutama mungkin terjadi ketika ginjal berada di bawah tekanan, misalnya ketika diet mengandung garam yang berlebihan atau zat-zat beracun yang perlu dihilangkan. Oleh karena itu, minum air yang cukup dapat membantu melindungi organ vital ini, dan terdapat bukti kuat bahwa kambuhnya batu ginjal jauh lebih kecil kemungkinannya ketika status hidrasi Anda baik karena volume urin yang meningkat. Jadi, itulah alasan pertama Anda menggunakan kalkulator asupan air harian untuk memperkirakan berapa banyak air yang perlu Anda minum per hari.</p>
+      <p>
+        2. <strong>Diabetes Tipe II:</strong> Penelitian epidemiologi telah menunjukkan bahwa asupan air total harian yang rendah dikaitkan dengan peningkatan diagnosis hiperglikemia dan sebuah penelitian menegaskan bahwa asupan air total yang rendah selama 3 hari pada orang dengan diabetes melitus tipe 2 secara akut mengganggu respons glukosa darah selama tes toleransi glukosa oral melalui kortisol tetapi tidak pada regulasi glukosa yang diperantarai oleh RAAS, di mana RAAS merupakan singkatan dari sistem renin-angiotensin-aldosteron </p>
+      <p>
+        3. <strong>Denyut Jantung dan Tekanan Darah:</strong> Asupan air secara akut mengurangi detak jantung dan meningkatkan tekanan darah pada orang dengan tekanan darah normal atau meningkat. Efek asupan air pada efek pressor dan detak jantung terjadi dalam waktu 15-20 menit setelah minum air dan dapat bertahan hingga 60 menit. Konsumsi air juga bermanfaat dalam mencegah reaksi vasovagal dengan sinkop pada pendonor darah yang berisiko tinggi mengalami sinkop pasca donor. Beberapa alasan kuat untuk mempertimbangkan menggunakan kalkulator asupan air dan mematuhi perkiraan sebaik mungkin.
+      </p>
+      <p>
+        4. <strong>Sembelit dan Asupan Air:</strong> Penelitian epidemiologi telah menunjukkan bahwa asupan air total harian yang rendah dikaitkan dengan peningkatan diagnosis hiperglikemia dan sebuah penelitian menegaskan bahwa asupan air total yang rendah selama 3 hari pada orang dengan diabetes melitus tipe 2 secara akut mengganggu respons glukosa darah selama tes toleransi glukosa oral melalui kortisol tetapi tidak pada regulasi glukosa yang diperantarai oleh RAAS, di mana RAAS merupakan singkatan dari sistem renin-angiotensin-aldosteron.<p>
+        5. <strong>Kemampuan Kognitif:</strong> Sejumlah penelitian yang diteliti oleh Popkin et. al menunjukkan bahwa dehidrasi ringan hingga sedang dapat berdampak negatif pada kinerja kognitif. Alih-alih menunjukkan bahwa efek hidrasi atau konsumsi air terhadap kognisi adalah kontradiktif, banyak penelitian yang berbeda secara signifikan dalam metodologi dan pengukuran perilaku kognitif. Sebagian besar penelitian yang menginduksi dehidrasi menggabungkan panas dan olahraga, sehingga sulit untuk memisahkan efek dehidrasi pada kinerja kognitif dalam kondisi sedang dari efek panas dan olahraga. Dalam praktiknya, hanya sedikit yang diketahui tentang mekanisme efek dehidrasi ringan terhadap kinerja mental. Telah diusulkan bahwa dehidrasi ringan bertindak sebagai stresor fisiologis yang bersaing dan menarik perhatian dari proses kognitif. Namun, penelitian mengenai hipotesis ini masih terbatas dan perlu diteliti lebih lanjut.</p>
+    </section>
 
-      <div class="form-group">
-        <label for="tinggi">Tinggi Badan</label>
-        <input type="number" id="tinggi" name="tinggi" required>
-        <span>cm</span>
-      </div>
-
-      <div class="form-group">
-        <label for="berat">Berat Badan</label>
-        <input type="number" id="berat" name="berat" required>
-        <span>kg</span>
-      </div>
-
-      <div class="form-group">
-        <label for="tingkat-aktivitas">Tingkat Aktivitas</label>
-        <select id="tingkat-aktivitas" name="tingkat-aktivitas" required>
-          <option value="0">Tidak Berolah Raga</option>
-          <option value="0.1">Ringan (olahraga 1-3 kali seminggu)</option>
-          <option value="0.2">Sedang (olahraga 3-5 kali seminggu)</option>
-          <option value="0.3">Berat (olahraga 6-7 kali seminggu)</option>
-        </select>
-      </div>
-      
-
-      <button type="button" id="hitung-button">Hitung</button>
-    </form>
-    <div id="result"></div>
-  </div>
-
-  <script>
-    document.getElementById("hitung-button").addEventListener("click", function () {
-      const umur = parseInt(document.getElementById("umur").value);
-      const berat = parseFloat(document.getElementById("berat").value);
-      const jenisKelamin = document.querySelector('input[name="jenis_kelamin"]:checked')?.value;
-      const aktivitas = parseFloat(document.getElementById("tingkat-aktivitas").value);
-
-      if (isNaN(umur) || isNaN(berat) || !jenisKelamin) {
-        alert("Harap isi semua data dengan benar.");
-        return;
-      }
-
-      let waterIntake = berat * 30;
-      waterIntake += waterIntake * aktivitas;
-
-      if (umur > 50) {
-        waterIntake *= 0.85;
-      }
-
-      if (jenisKelamin === "perempuan") {
-        waterIntake *= 0.90;
-      }
-
-      const resultDiv = document.getElementById("result");
-      resultDiv.innerHTML = `<h2>Hasil</h2><p>Kebutuhan air harian Anda adalah <strong>${waterIntake.toFixed(2)} ml</strong>.</p>`;
-    });
-  </script>
+    <section class="health-project">
+      <h2>Health Project: Genitourinari</h2>
+      <p>David Bryan (2258011032)</p>
+    </section>
+    
+    <div class="references-section">
+      <h2>References</h2>
+      <ul>
+        <li>Popkin B. M., D’Anci K. E., Rosenberg I. H. (2010) "Water, Hydration and Health" <i>Nutrition Reviews</i> 68(8):439–458</li>
+        <li>Malisova O., Athanasatou A., Pepa A., Husemann M., Domnik K., Braun H., Mora-Rodriguez R., Ortega J.F., Fernandez-Elias V.E., Kapsokefalou M. (2016) "Water Intake and Hydration Indices in Healthy European Adults: The European Hydration Research Study (EHRS)" <i>Nutrients</i> 8(4):204</li>
+        <li>Kant A. K., Graubard B. I. (2017) "A prospective study of water intake and subsequent risk of all-cause mortality in a national cohort" <i>The American Journal of Clinical Nutrition</i> 105(1):212–220</li>
+        <li>Johnson E.C., Bardis C.N., Jansen L.T., Adams J.D., Kirkland T.W., Kavouras S.A. (2017) "Reduced water intake deteriorates glucose regulation in patients with type 2 diabetes" <i>Nutritional Research</i> 43:25-32</li>
+      </ul>
+    </div>
+    
+  <script src="script.js"></script>
 </body>
 </html>

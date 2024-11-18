@@ -1,28 +1,43 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #e0f7fa;
+  font-family: 'Arial', sans-serif;
+  background-color: #d0f0f4;
   margin: 0;
   padding: 20px;
   display: flex;
   justify-content: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .calculator-container {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff 70%, #b2ebf2 100%);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 400px;
-  border: 1px solid #b2ebf2;
+  max-width: 450px;
+  border: 1px solid #00acc1;
+  margin-bottom: 25px;
+}
+
+h1.title {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #00838f;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .form-group {
@@ -31,55 +46,150 @@ form {
 }
 
 label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #00796b;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #006064;
 }
 
-input[type="number"], select {
-  padding: 8px;
-  border: 1px solid #80deea;
-  border-radius: 4px;
-  font-size: 14px;
-  background-color: #e0f7fa;
+input[type="number"],
+select {
+  padding: 10px;
+  border: 1px solid #26c6da;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f0fcfd;
   color: #004d40;
+  transition: all 0.3s ease;
 }
 
-input[type="number"]:focus, select:focus {
+input[type="number"]:focus,
+select:focus {
   outline: none;
-  border-color: #26c6da;
-  box-shadow: 0 0 5px rgba(38, 198, 218, 0.5);
+  border-color: #00838f;
+  box-shadow: 0 0 8px rgba(0, 131, 143, 0.5);
 }
 
 .radio-group {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 
 .radio-group label {
   display: flex;
   align-items: center;
-  gap: 5px;
-  color: #00796b;
+  gap: 8px;
+  font-weight: 500;
+  color: #004d40;
 }
 
 button {
-  background-color: #26c6da;
+  background-color: #00acc1;
   color: #ffffff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #00acc1;
+  background-color: #00838f;
+  transform: scale(1.05);
 }
 
 span {
   margin-left: 5px;
   font-size: 14px;
-  color: #666666;
+  color: #555555;
+}
+
+.info-section {
+  background: linear-gradient(135deg, #ffffff 70%, #e0f7fa 100%);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #00acc1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 1200px;
+  min-width: 300px;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.info-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00796b;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #004d40;
+  margin-bottom: 15px;
+}
+
+.references-section {
+  background: linear-gradient(135deg, #ffffff 70%, #e0f7fa 100%);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #00acc1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin-top: 25px;
+  width: 90%;
+  max-width: 1200px;
+  min-width: 300px;
+  text-align: left;
+}
+
+.references-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00796b;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.references-section ul {
+  padding-left: 25px;
+}
+
+.references-section li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+.health-project {
+  background: linear-gradient(135deg, #ffffff 70%, #e0f7fa 100%);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #00acc1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin-top: 25px;
+  width: 90%;
+  max-width: 1200px;
+  min-width: 300px;
+  text-align: center;
+}
+
+.health-project h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00796b;
+  margin-bottom: 15px;
+}
+
+.health-project p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #004d40;
+  margin: 0;
 }
